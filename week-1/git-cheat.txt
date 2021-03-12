@@ -1,0 +1,27 @@
+1)git config --global alias.st status => use st as alias for status command
+2) git push -d origin br1=> delete remote branch br1 in origin
+3)rm -rf .git => removes the git repository
+4)git branch --merged=> show merged branches
+5)git branch --no-merged=>" non " "
+6)git branch -d br1 => deletes branch br1 , gives error if br1 is not merged, use -D for anyways deleting
+7)git branch -v => gives branches with last commit
+8) git merge br1=> to merge br1 with current branch
+9) git checkout -b br1 => create and switch to new branch br1 from cur branch
+10) git checkout test.txt => to Backout working directory change 
+11) git reset HEAD test.txt => to unstage a file
+12) git reset HEAD~2=> to remove recent top 2 commits and files also get unstaged(mixed reset)
+
+13)git reset --soft HEAD~2=> to remove recent top 2 commits but files remain staged.
+14)git reset --hard HEAD~2=> to remove recent top 2 commits and wont keep changes in staging and working area.
+15)git revert commitid => reverts the selected commit and make a fresh commit out of it , this does not tamper commit history and it makes pushing easier
+https://www.youtube.com/watch?v=VUuGa1QFmcA&ab_channel=JavaHomeCloud=>git revert
+https://www.youtube.com/watch?v=KLEDKgMmbBI&ab_channel=CoreySchafer=>git stash
+16)stash is used to save changes that we are not ready to commit and maybe switch branches.
+   git stash save "message"=> to stash the changes
+   git stash list => gives a list of stashes
+   git stash apply stash@{0} => applies stash but doesn't delete it.
+   git stash pop => applies the top stash in list and drops it.
+   git stash drop stash@{0} => to drop a particular stash from list
+   git stash clear => to get rid of all stashes
+ Note -> stashes get carry over from branch
+17)git rebase 
